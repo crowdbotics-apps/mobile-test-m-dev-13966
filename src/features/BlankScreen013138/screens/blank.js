@@ -29,7 +29,8 @@ export default class Blank extends React.Component {
     DateTimePicker_6: new Date(""),
     TextInput_7: "",
     CheckBox_10: true,
-    CheckBox_12: true
+    CheckBox_12: true,
+    Switch_35: true
   }
 
   render = () => (
@@ -43,10 +44,12 @@ export default class Blank extends React.Component {
       />
       <TextInput
         placeholder="Number Input Placeholder"
+        keyboardType="numeric"
         value={this.state.TextInput_5}
         onChangeText={nextValue => this.setState({ TextInput_5: nextValue })}
       />
       <DateTimePicker
+        showIcon={false}
         date={this.state.DateTimePicker_6}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_6: selectedDate })
@@ -54,6 +57,7 @@ export default class Blank extends React.Component {
       />
       <TextInput
         placeholder="Sample text input placeholder"
+        multiline={true}
         style={styles.TextInput_7}
         value={this.state.TextInput_7}
         onChangeText={nextValue => this.setState({ TextInput_7: nextValue })}
@@ -71,6 +75,11 @@ export default class Blank extends React.Component {
         title="Checkbox"
         checked={this.state.CheckBox_12}
         onPress={nextChecked => this.setState({ CheckBox_12: nextChecked })}
+      />
+      <Switch
+        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
+        value={this.state.Switch_35}
+        onValueChange={nextChecked => this.setState({ Switch_35: nextChecked })}
       />
     </View>
   )
@@ -108,5 +117,17 @@ const styles = StyleSheet.create({
   Slider_9: {},
   CheckBox_10: {},
   Icon_11: {},
-  CheckBox_12: {}
+  CheckBox_12: {},
+  View_1: {},
+  Text_2: {},
+  Button_3: {},
+  TextInput_4: {},
+  TextInput_5: {},
+  DateTimePicker_6: {},
+  TextInput_7: { height: 100 },
+  Slider_9: {},
+  CheckBox_10: {},
+  Icon_11: {},
+  CheckBox_12: {},
+  Switch_35: {}
 })
