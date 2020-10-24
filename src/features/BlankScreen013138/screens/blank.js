@@ -27,7 +27,9 @@ export default class Blank extends React.Component {
     TextInput_4: "",
     TextInput_5: "",
     DateTimePicker_6: new Date(""),
-    TextInput_7: ""
+    TextInput_7: "",
+    CheckBox_10: true,
+    CheckBox_12: true
   }
 
   render = () => (
@@ -57,6 +59,19 @@ export default class Blank extends React.Component {
         onChangeText={nextValue => this.setState({ TextInput_7: nextValue })}
       />
       <Slider value={50} minimumValue={0} maximumValue={100} />
+      <CheckBox
+        title="Radio button"
+        checkedIcon="dot-circle-o"
+        uncheckedIcon="circle-o"
+        checked={this.state.CheckBox_10}
+        onPress={nextChecked => this.setState({ CheckBox_10: nextChecked })}
+      />
+      <Icon name="star" />
+      <CheckBox
+        title="Checkbox"
+        checked={this.state.CheckBox_12}
+        onPress={nextChecked => this.setState({ CheckBox_12: nextChecked })}
+      />
     </View>
   )
 }
@@ -82,5 +97,16 @@ const styles = StyleSheet.create({
   TextInput_5: {},
   DateTimePicker_6: {},
   TextInput_7: { height: 100 },
-  Slider_9: {}
+  Slider_9: {},
+  View_1: {},
+  Text_2: {},
+  Button_3: {},
+  TextInput_4: {},
+  TextInput_5: {},
+  DateTimePicker_6: {},
+  TextInput_7: { height: 100 },
+  Slider_9: {},
+  CheckBox_10: {},
+  Icon_11: {},
+  CheckBox_12: {}
 })
