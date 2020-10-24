@@ -41,12 +41,10 @@ export default class Blank extends React.Component {
       />
       <TextInput
         placeholder="Number Input Placeholder"
-        keyboardType="numeric"
         value={this.state.TextInput_5}
         onChangeText={nextValue => this.setState({ TextInput_5: nextValue })}
       />
       <DateTimePicker
-        showIcon={false}
         date={this.state.DateTimePicker_6}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_6: selectedDate })
@@ -54,17 +52,11 @@ export default class Blank extends React.Component {
       />
       <TextInput
         placeholder="Sample text input placeholder"
-        multiline={true}
+        style={styles.TextInput_7}
         value={this.state.TextInput_7}
         onChangeText={nextValue => this.setState({ TextInput_7: nextValue })}
       />
-      <Image
-        source={{
-          uri:
-            "https://crowdbotics-slack-dev.s3.amazonaws.com/media/project_component_resources/photo-1503023345310-bd7c1de61c7d_ToJ7bf2.jpg"
-        }}
-        style={styles.Image_8}
-      />
+      <Slider value={50} minimumValue={0} maximumValue={100} />
     </View>
   )
 }
@@ -74,6 +66,7 @@ const styles = StyleSheet.create({
     flex: 1,
     marginHorizontal: 16
   },
+
   View_1: {},
   Text_2: {},
   Button_3: {},
@@ -81,5 +74,13 @@ const styles = StyleSheet.create({
   TextInput_5: {},
   DateTimePicker_6: {},
   TextInput_7: {},
-  Image_8: { width: 750 }
+  Image_8: { width: 750 },
+  View_1: {},
+  Text_2: {},
+  Button_3: {},
+  TextInput_4: {},
+  TextInput_5: {},
+  DateTimePicker_6: {},
+  TextInput_7: { height: 100 },
+  Slider_9: {}
 })
