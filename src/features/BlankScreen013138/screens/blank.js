@@ -44,12 +44,10 @@ export default class Blank extends React.Component {
       />
       <TextInput
         placeholder="Number Input Placeholder"
-        keyboardType="numeric"
         value={this.state.TextInput_5}
         onChangeText={nextValue => this.setState({ TextInput_5: nextValue })}
       />
       <DateTimePicker
-        showIcon={false}
         date={this.state.DateTimePicker_6}
         onDateChange={selectedDate =>
           this.setState({ DateTimePicker_6: selectedDate })
@@ -57,19 +55,20 @@ export default class Blank extends React.Component {
       />
       <TextInput
         placeholder="Sample text input placeholder"
-        multiline={true}
         style={styles.TextInput_7}
         value={this.state.TextInput_7}
         onChangeText={nextValue => this.setState({ TextInput_7: nextValue })}
       />
       <Slider value={50} minimumValue={0} maximumValue={100} />
-      <CheckBox
-        title="Radio button"
-        checkedIcon="dot-circle-o"
-        uncheckedIcon="circle-o"
-        checked={this.state.CheckBox_10}
-        onPress={nextChecked => this.setState({ CheckBox_10: nextChecked })}
-      />
+      <TouchableOpacity
+        onPress={() => this.props.navigation.navigate("BlankScreen213140")}
+      >
+        <CheckBox
+          title="Radio button"
+          checked={this.state.CheckBox_10}
+          onPress={nextChecked => this.setState({ CheckBox_10: nextChecked })}
+        />
+      </TouchableOpacity>
       <Icon name="star" />
       <TouchableOpacity
         onPress={() => this.props.navigation.navigate("BlankScreen113139")}
@@ -81,7 +80,6 @@ export default class Blank extends React.Component {
         />
       </TouchableOpacity>
       <Switch
-        trackColor={{ false: "#C0CCDA", true: "#409EFF" }}
         value={this.state.Switch_35}
         onValueChange={nextChecked => this.setState({ Switch_35: nextChecked })}
       />
@@ -122,6 +120,18 @@ const styles = StyleSheet.create({
   CheckBox_10: {},
   Icon_11: {},
   CheckBox_12: {},
+  View_1: {},
+  Text_2: {},
+  Button_3: {},
+  TextInput_4: {},
+  TextInput_5: {},
+  DateTimePicker_6: {},
+  TextInput_7: { height: 100 },
+  Slider_9: {},
+  CheckBox_10: {},
+  Icon_11: {},
+  CheckBox_12: {},
+  Switch_35: {},
   View_1: {},
   Text_2: {},
   Button_3: {},
